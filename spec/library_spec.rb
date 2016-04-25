@@ -3,7 +3,7 @@ require 'library.rb'
 require 'file_helper.rb'
 
 describe Library do
-  before(:all) do
+  before(:each) do
     @library = FileHelper.read_library_from_file('test.data')
   end
 
@@ -32,13 +32,13 @@ describe Library do
 
   describe '.who_often_takes_the_book' do
     it 'should return reader with name Vasya' do
-      expect(@library.who_often_takes_the_book.name).to eq 'Vasya'
+      expect(@library.who_often_takes_the_book).to eq 'Vasya'
     end
   end
 
   describe '.most_popular_book' do
     it 'should return book with title Dig' do
-      expect(@library.most_popular_book.title).to eq 'Dig'
+      expect(@library.most_popular_book).to eq 'Dig'
     end
   end
 
