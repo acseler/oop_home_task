@@ -5,11 +5,18 @@ module Statistics
   end
 
   def most_popular_book
-    @orders.group_by { |order| order.book }.sort_by { |_, v| -v.size}.first[0].title
+    bk_count_in_ord.first[0].title
   end
 
   def who_read_one_of_three
     bk_count_in_ord[0..2].to_h.values.flatten.uniq { |order| order.reader }.size
   end
+
+  private
+
+  def get_uniq_books_from_orders
+    @orders.group_by { |order| order.book}.sort_by { |_, v| -v.size}
+  end
+  alias bk_count_in_ord get_uniq_books_from_orders
 
 end
