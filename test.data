@@ -1,0 +1,141 @@
+--- !ruby/object:Library
+books:
+- &3 !ruby/object:Book
+  title: Dig
+  author: &1 !ruby/object:Author
+    name: Matz
+    biography: Programmer
+- &4 !ruby/object:Book
+  title: Compare
+  author: &2 !ruby/object:Author
+    name: Matsumoto
+    biography: Developer
+- &7 !ruby/object:Book
+  title: Equal
+  author: &16 !ruby/object:Author
+    name: Hiro
+    biography: Japanise
+- &9 !ruby/object:Book
+  title: Include
+  author: *1
+- &11 !ruby/object:Book
+  title: Collect
+  author: *2
+orders:
+- !ruby/object:Order
+  book: *3
+  reader: &5 !ruby/object:Reader
+    name: Vasya
+    email: myemail@gmail.com
+    city: Dnepr
+    street: Artem st.
+    house: 12
+  date: 2012-10-11 00:00:00.000000000 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: &10 !ruby/object:Reader
+    name: Petya
+    email: myemail@gmail.com
+    city: Lviv
+    street: Street st.
+    house: 21
+  date: 2012-10-11 00:00:00.000000000 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: &6 !ruby/object:Reader
+    name: Ivan
+    email: myemail@gmail.com
+    city: Dnepr
+    street: Artem st.
+    house: 12
+  date: 2012-10-11 00:00:00.000000000 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: &12 !ruby/object:Reader
+    name: Kolya
+    email: myemail@gmail.com
+    city: Lviv
+    street: Street st.
+    house: 21
+  date: 2012-10-11 00:00:00.000000000 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: &13 !ruby/object:Reader
+    name: Danila
+    email: myemail@gmail.com
+    city: Dnepr
+    street: Artem st.
+    house: 12
+  date: 2012-10-11 00:00:00.000000000 +03:00
+- !ruby/object:Order
+  book: *4
+  reader: *5
+  date: 2012-10-11 00:00:00.000000000 +03:00
+- !ruby/object:Order
+  book: *4
+  reader: &14 !ruby/object:Reader
+    name: Gektor
+    email: myemail@gmail.com
+    city: Lviv
+    street: Street st.
+    house: 21
+  date: 2012-10-11 00:00:00.000000000 +03:00
+- !ruby/object:Order
+  book: *4
+  reader: &8 !ruby/object:Reader
+    name: Mehoil
+    email: myemail@gmail.com
+    city: Dnepr
+    street: Artem st.
+    house: 12
+  date: 2012-10-11 00:00:00.000000000 +03:00
+- !ruby/object:Order
+  book: *4
+  reader: *6
+  date: 2012-10-11 00:00:00.000000000 +03:00
+- !ruby/object:Order
+  book: *7
+  reader: *5
+  date: 2012-10-11 00:00:00.000000000 +03:00
+- !ruby/object:Order
+  book: *7
+  reader: &15 !ruby/object:Reader
+    name: Genna
+    email: myemail@gmail.com
+    city: Lviv
+    street: Street st.
+    house: 21
+  date: 2012-10-11 00:00:00.000000000 +03:00
+- !ruby/object:Order
+  book: *7
+  reader: *8
+  date: 2012-10-11 00:00:00.000000000 +03:00
+- !ruby/object:Order
+  book: *9
+  reader: *5
+  date: 2012-10-11 00:00:00.000000000 +03:00
+- !ruby/object:Order
+  book: *9
+  reader: *10
+  date: 2012-10-11 00:00:00.000000000 +03:00
+- !ruby/object:Order
+  book: *11
+  reader: *5
+  date: 2012-10-11 00:00:00.000000000 +03:00
+- !ruby/object:Order
+  book: *11
+  reader: *10
+  date: 2012-10-11 00:00:00.000000000 +03:00
+readers:
+- *5
+- *10
+- *6
+- *12
+- *13
+- *14
+- *8
+- *15
+authors:
+- *1
+- *2
+- *16
